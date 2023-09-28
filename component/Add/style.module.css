@@ -1,0 +1,132 @@
+.form{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0 5px 1px rgb(194, 193, 193);
+    border-radius: 5px 30px;
+    display: grid;
+    grid-template-rows: 20px 1fr 45px;
+    overflow: hidden;
+}
+.title{
+    color: rgb(9, 6, 155);
+    grid-area: 1/1/1/1;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    grid-area: 2/1/2/1;
+    display: grid;
+    grid-auto-rows: 30px;
+    gap: 30px;
+    padding: 5px;
+
+}
+.containerTransportadora,
+.containerCliente,
+.contianerRazao,
+.containerPrimeiroResponsavel,
+.containerSegundoResponsavel{
+    position: relative;
+    width: 100%;
+}
+.containerTransportadora label,
+.containerCliente label,
+.contianerRazao label,
+.containerPrimeiroResponsavel label,
+.containerSegundoResponsavel label{
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    color: rgb(124, 124, 124);
+    transition: .5s;
+}
+.containerTransportadora input,
+.containerCliente input,
+.contianerRazao input,
+.containerPrimeiroResponsavel input,
+.containerSegundoResponsavel input{
+    padding: 10px 0 10px 10px;
+    border: 1px solid rgba(124, 124, 124, 0.466);
+    width: 95%;
+}
+.containerTransportadora input:valid~label,
+.containerCliente input:valid~label,
+.contianerRazao input:valid~label,
+.containerPrimeiroResponsavel input:valid~label,
+.containerSegundoResponsavel input:valid~label,
+.containerTransportadora input:focus~label,
+.containerCliente input:focus~label,
+.contianerRazao input:focus~label,
+.containerPrimeiroResponsavel input:focus~label,
+.containerSegundoResponsavel input:focus~label{
+    transform: translateY(-20px);
+    background-color: white;
+
+}
+.containerTransportadora{
+
+}
+.containerListRazacao,
+.containerListRazacao_close,
+.containerListPrimeiroResponsavel,
+.containerListSegundoResponsavel,
+.containerListPrimeiroResponsavel_close,
+.containerListSegundoResponsavel_close{
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px 1px rgb(194, 193, 193);
+    width: 100%;
+    list-style: none;
+    transition: .5s;
+    min-height: 50px;
+}
+.containerListRazacao li,
+.containerListRazacao_close li
+.containerListPrimeiroResponsavel li,
+.containerListSegundoResponsavel li,
+.containerListPrimeiroResponsavel_close li,
+.containerListSegundoResponsavel_close li{
+    z-index: 10;
+    padding: 5px;
+}
+.containerListRazacao_close,
+.containerListPrimeiroResponsavel_close,
+.containerListSegundoResponsavel_close{
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .5s;
+}
+.containerCliente{
+
+}
+.contianerRazao{
+
+}
+.containerPrimeiroResponsavel{
+
+}
+.containerSegundoResponsavel{
+
+}
+.cotainerButton{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cotainerButton button{
+    width: 250px;
+    padding: 10px;
+    background-color: rgb(25, 228, 126);
+    color: rgb(3, 83, 43);
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+}
+.button{
+}
