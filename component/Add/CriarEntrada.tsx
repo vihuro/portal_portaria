@@ -55,7 +55,7 @@ export default function Card({ changeToogle, refreshTable }: props) {
                 cliente: novaEntrada.cliente,
                 razao: novaEntrada.razao,
                 primeroResponsavel: primeroResponsave.id,
-                segundoResposavel: segundoResposavel.id
+                segundoResponsavel: segundoResposavel.id
             }
             console.log(obj)
 
@@ -82,7 +82,11 @@ export default function Card({ changeToogle, refreshTable }: props) {
 
 
         return (
-            <form className={styles.form} >
+            <form className={styles.form} onClick={() =>{
+                setListPrimeiroResponsavel(false)
+                setListRazao(false)
+                setListSegundoReponsavel(false)
+            }} >
                 <header className={styles.title} >
                     <h3>ENTRADA</h3>
                 </header>
@@ -113,9 +117,11 @@ export default function Card({ changeToogle, refreshTable }: props) {
                     <div className={styles.contianerRazao} >
                         <input type="text"
                             id="txtRazao"
+                            required
                             value={novaEntrada.razao}
                             onChange={() => { }}
-                            onClick={() => {
+                            onClick={(e) => {
+                                e.stopPropagation()
                                 setListRazao(!listRazao)
                                 setListPrimeiroResponsavel(false)
                                 setListSegundoReponsavel(false)
@@ -166,7 +172,8 @@ export default function Card({ changeToogle, refreshTable }: props) {
                             id="txtResponsavel1"
                             value={primeroResponsave.nome}
                             onChange={() => { }}
-                            onClick={() => {
+                            onClick={(e) => {
+                                e.stopPropagation()
                                 setListRazao(false)
                                 setListPrimeiroResponsavel(!listPrimeiroResponsavel)
                                 setListSegundoReponsavel(false)
@@ -193,7 +200,8 @@ export default function Card({ changeToogle, refreshTable }: props) {
                             id="txtResponsavel2"
                             value={segundoResposavel.nome}
                             onChange={() => { }}
-                            onClick={() => {
+                            onClick={(e) => {
+                                e.stopPropagation()
                                 setListRazao(false)
                                 setListPrimeiroResponsavel(false)
                                 setListSegundoReponsavel(!listSegundoReposavel)

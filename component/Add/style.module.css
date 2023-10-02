@@ -82,7 +82,8 @@
     width: 100%;
     list-style: none;
     transition: .5s;
-    min-height: 50px;
+    height: 50px;
+    overflow: auto;
 }
 .containerListRazacao li,
 .containerListRazacao_close li

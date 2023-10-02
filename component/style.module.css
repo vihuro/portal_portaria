@@ -4,20 +4,26 @@
     height: 100%;
     display: grid;
     grid-template-rows: 60px 1fr;
-    position: relative;
+    position: absolute;
+    overflow: hidden;
   }
   .wrapContainerTable{
     grid-area: 2/1/2/1;
+    overflow: auto;
   }
   .container_action{
     grid-area: 1/1/1/1;
     display: grid;
     background-color: rgb(2, 0, 121);
-    position: relative;
+    grid-template-columns: 40px 1fr;
     
   }
   .containerButtonAdd{
+    grid-area: 1/2/1/2;
     position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     right: 0;
 
   }
